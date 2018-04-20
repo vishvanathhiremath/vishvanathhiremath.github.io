@@ -2,21 +2,20 @@
 <html>
 <body onload="retrieveAmount()">
 <h1>Please click on continue button to proceed to payment</h1>
-    <button onclick="retrieveAmount()">Try it9</button>
+    <button onclick="retrieveAmount()">Try it0</button>
     <p id="demo"></p>
 	 
 <script>
 	var amount;
-function retrieveAmount() {
     var x = document.URL;
     var pos = x.indexOf('=');
 	var length = x.length
     amount = x.substring(pos+1, length);
-			}
-	alert(amount);
+	
 
 
 </script>
+	alert(amount);
 <script type="text/javascript"
         src="https://www.simplify.com/commerce/simplify.pay.js">
         </script>
