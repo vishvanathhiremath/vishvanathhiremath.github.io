@@ -2,30 +2,26 @@
 <html>
 <body>
 <h1>Please click on continue button to proceed to payment</h1>
-    <button onclick="myFunction()">Try it3</button>
+    <button onclick="retrieveAmount()">Try it3</button>
     <p id="demo"></p>
 <script>
-function myFunction() {
+function retrieveAmount() {
     var x = document.URL;
-    var parms = x.split('&');
     var pos = x.indexOf('=');
-    for (var i=0; i<parms.length; i++) {
-			var pos = parms[i].indexOf('=');
-			if (pos > 0  && x == parms[i].substring(0,pos)) {
-				return parms[i].substring(pos+1);;
+	var length = x.length
+    var amount = x.substring(pos+1, length);
 			}
-		}
-alert(parms[0]);
-}
+
+
 </script>
 <script type="text/javascript"
         src="https://www.simplify.com/commerce/simplify.pay.js">
         </script>
-<button data-sc-key="sbpb_MDZhOGNlNDUtN2ZkNi00YzNhLTg5M2MtZDM1YmYwZTkyY2Ex"
+<button onclick="retrieveAmount() data-sc-key="sbpb_MDZhOGNlNDUtN2ZkNi00YzNhLTg5M2MtZDM1YmYwZTkyY2Ex"
         data-name="American Airlines"
         data-description="Collecting payment for reactivating miles"
         data-reference="99999"
-        data-amount="3000"
+        data-amount=amount
         data-color="#12B830">
         Continue
 </button>
