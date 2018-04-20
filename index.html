@@ -2,13 +2,20 @@
 <html>
 <body>
 <h1>Please click on continue button to proceed to payment</h1>
-    <button onclick="myFunction()">Try it1</button>
+    <button onclick="myFunction()">Try it2</button>
     <p id="demo"></p>
 <script>
 function myFunction() {
     var x = document.URL;
+    var parms = x.split('&');
     var pos = x.indexOf('=');
-    document.getElementById("demo").innerHTML = pos;
+    for (var i=0; i<parms.length; i++) {
+			var pos = parms[i].indexOf('=');
+			if (pos > 0  && x == parms[i].substring(0,pos)) {
+				return parms[i].substring(pos+1);;
+			}
+		}
+    document.getElementById("demo").innerHTML = parms[0];
 }
 </script>
 <script type="text/javascript"
