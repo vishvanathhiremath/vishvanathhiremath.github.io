@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body onload="retrieveAmount()">
-<h1>Please click on continue button to proceed to payment</h1>
-    <button onclick="retrieveAmount()">Try it12</button>
-    <p id="demo"></p>
-	 
+ 
 <script>
 	function retrieveAmount()
 	{
@@ -13,7 +10,6 @@
     var pos = x.indexOf('=');
 	var length = x.length
     amount = x.substring(pos+1, length);
-		return amount;
 		alert(amount);
 	}
 
