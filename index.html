@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
 <body onload="retrieveAmount()">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+	
 <h1>Please click on continue button to proceed to payment</h1>
     <button onclick="retrieveAmount()">Try it19</button>
     <p id="demo"></p>
 	 
 <script>
 
-document.addEventListener("DOMContentLoaded", function(event){
-	retrieveAmount();
-})
-function retrieveAmount() {
+	
+	$(document).ready(function(){
+		retrieveAmount();
+	}
+			  
+	function retrieveAmount(){
 		var amount;
-	
-    var x = document.URL;
-    var pos = x.indexOf('=');
-	var length = x.length;
-    amount = x.substring(pos+1,length);
-			}
-	console.log(pos);
-	console.log(length);
-	console.log(x);
-	
-	alert(amount);
-	
-	document.getElementById("buttonid").setAttribute("data-amount", amount);
-
+    		var x = document.URL;
+   		var pos = x.indexOf('=');
+		var length = x.length;
+    		amount = x.substring(pos+1,length);
+		console.log(amount);
+		$("#buttonId").prop('data-amount',amount);
+		
+	}
 
 </script>
 <script type="text/javascript"
