@@ -8,18 +8,24 @@
 <script>
 
 document.addEventListener("DOMContentLoaded", function(event){
-	var amount;
-	function retrieveAmount() {
+	retrieveAmount();
+})
+function retrieveAmount() {
+		var amount;
+	
     var x = document.URL;
     var pos = x.indexOf('=');
 	var length = x.length
-    amount = x.substring(pos+1, length);
+    amount = x.substring(pos+1, 
+			 length);
 			}
+	console.log(pos);
+	console.log(length);
+	console.log(x);
+	
 	alert(amount);
 	
 	document.getElementById("buttonid").setAttribute("data-amount", amount);
-})
-
 
 
 </script>
