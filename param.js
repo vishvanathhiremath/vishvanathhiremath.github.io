@@ -1,6 +1,7 @@
 function qs(search_for) {
 		var query = window.location.search.substring(1);
 		var parms = query.split('&');
+	var parms2 = query.split('&');
 		for (var i=0; i<parms.length; i++) {
 			var pos = parms[i].indexOf('=');
 			if (pos > 0  && search_for == parms[i].substring(0,pos)) {
@@ -8,4 +9,5 @@ function qs(search_for) {
 			}
 		}
 		return "";
+		//Vishva test git functionality
 	}
